@@ -43,14 +43,29 @@
         .sketch-border::before {
             content: '';
             position: absolute;
-            top: -2px;
-            left: -2px;
-            right: -2px;
-            bottom: -2px;
+            top: -3px;
+            left: -3px;
+            right: -3px;
+            bottom: -3px;
             border: 2px solid #333;
-            border-radius: 10px;
+            border-radius: 6px;
             transform: rotate(-0.5deg);
             z-index: -1;
+            background: transparent;
+        }
+
+        .sketch-border::after {
+            content: '';
+            position: absolute;
+            top: -1px;
+            left: -1px;
+            right: -1px;
+            bottom: -1px;
+            border: 1px solid #333;
+            border-radius: 10px;
+            transform: rotate(0.8deg);
+            z-index: -1;
+            background: transparent;
         }
 
         .doodle-border {
@@ -222,47 +237,50 @@
 
 <body class="paper-texture">
     <!-- Header -->
-    <header class="pb-16 relative">
+    <header class="relative bg-white pb-20">
+        <!-- Hero Illustration -->
         <div class="no-select">
-            <img src="./assets/man_drawing.png" alt="Workshop Image" class="w-full h-full object-cover">
+            <img src="./assets/man_drawing.png" alt="Workshop Illustration" class="w-full h-auto object-cover" />
         </div>
 
+        <!-- Content -->
         <div class="container mx-auto px-6">
-            <div class="max-w-5xl mx-auto text-center relative">
-                <div class="mb-8 -mt-32">
-                    <div class="mb-6"> <span class="text-xl text-gray-500"> SIGGRAPH 2025 WORKSHOP </span></div>
+            <div class="max-w-4xl mx-auto text-center relative -mt-32">
+                <!-- Tagline -->
+                <p class="text-sm tracking-widest text-gray-500 uppercase mb-4">SIGGRAPH 2025 Workshop</p>
 
-                    <h1 class="handwritten text-4xl md:text-6xl font-bold mb-2 leading-tight text-gray-900">
-                        <!-- Drawing and Sketching: -->
-                        DRAWING & SKETCHING:
-                    </h1>
-                    <h2 class="text-2xl md:text-3xl text-gray-800">
-                        Art, Psychology, and Computer Graphics
-                    </h2>
-                </div>
+                <!-- Title -->
+                <h1 class="handwritten text-5xl md:text-6xl font-bold leading-tight text-gray-900 mb-4">
+                    Drawing & Sketching
+                </h1>
 
-                <div class="p-6 mt-6 max-w-2xl mx-auto">
-                    <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
-                        <div class="text-xl font-bold text-gray-900 sketch-border sketch-shadow p-4 bg-white transform -rotate-2">
-                            <div class="text-2xl mb-2">📅</div>
-                            <div>Date:</div>
-                            <div>Sunday, August 10th, 2025</div>
-                        </div>
-                        <div class="text-xl font-bold text-gray-900 sketch-border sketch-shadow p-4 bg-white transform rotate-1">
-                            <div class="text-2xl mb-2">⏰</div>
-                            <div>Time:</div>
-                            <div>9:00 AM - 12:30 PM PST</div>
-                        </div>
-                        <div class="text-xl font-bold text-gray-900 sketch-border sketch-shadow p-4 bg-white transform -rotate-1">
-                            <div class="text-2xl mb-2">📍</div>
-                            <div>Location:</div>
-                            <div>East Building, Room 11</div>
-                        </div>
+                <!-- Subtitle -->
+                <p class="text-xl md:text-2xl text-gray-700 mb-10">
+                    Art, Psychology, and Computer Graphics
+                </p>
+
+                <!-- Info Cards -->
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
+                    <div class="sketch-border p-6 text-center sketch-shadow transform rotate-1 hover:rotate-0 transition-transform">
+                        <div class="text-3xl mb-2">📅</div>
+                        <div class="text-sm text-gray-500 mb-1">Date</div>
+                        <div class="text-base font-medium text-gray-900">Sunday, August 10th, 2025</div>
+                    </div>
+                    <div class="sketch-border p-6 text-center sketch-shadow transform rotate-1 hover:rotate-0 transition-transform">
+                        <div class="text-3xl mb-2">⏰</div>
+                        <div class="text-sm text-gray-500 mb-1">Time</div>
+                        <div class="text-base font-medium text-gray-900">9:00 AM - 12:30 PM PST</div>
+                    </div>
+                    <div class="sketch-border p-6 text-center sketch-shadow transform -rotate-1 hover:rotate-0 transition-transform">
+                        <div class="text-3xl mb-2">📍</div>
+                        <div class="text-sm text-gray-500 mb-1">Location</div>
+                        <div class="text-base font-medium text-gray-900">East Building, Room 11</div>
                     </div>
                 </div>
             </div>
         </div>
     </header>
+
 
     <!-- Navigation -->
     <nav class="sticky top-0 z-40 py-4 bg-white border-t-2 border-b-2 border-dashed border-gray-300">
