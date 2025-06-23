@@ -8,8 +8,18 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&family=Caveat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        @font-face {
+            font-family: 'Epicene_Text_Regular';
+            src: url(./fonts/epicene-text-regular.woff2);
+        }
+
+        @font-face {
+            font-family: 'Epicene_Display_Bold';
+            src: url(./fonts/epicene-display-bold-italic.woff2);
+        }
+
         body {
-            font-family: 'Kalam', cursive;
+            font-family: 'Epicene_Text_Regular';
             background-color: #fefefe;
             background-image:
                 linear-gradient(90deg, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
@@ -18,7 +28,7 @@
         }
 
         .handwritten {
-            font-family: 'Caveat', cursive;
+            font-family: 'Epicene_Display_Bold';
             font-weight: 400;
             font-style: normal;
         }
@@ -97,76 +107,167 @@
             -webkit-user-select: none;
             -ms-user-select: none;
         }
+
+        .paper-texture {
+            background-image:
+                radial-gradient(circle at 1px 1px, rgba(0, 0, 0, 0.02) 1px, transparent 0);
+            background-size: 20px 20px;
+        }
+
+        .charcoal-shadow {
+            box-shadow:
+                0 4px 12px rgba(0, 0, 0, 0.08),
+                0 2px 6px rgba(0, 0, 0, 0.04),
+                inset 0 1px 0 rgba(255, 255, 255, 0.9);
+        }
+
+        .pencil-border {
+            border: 2px solid transparent;
+            background:
+                linear-gradient(white, white) padding-box,
+                repeating-linear-gradient(45deg,
+                    #000 0px,
+                    #000 1px,
+                    transparent 1px,
+                    transparent 8px) border-box;
+        }
+
+        .workshop-badge {
+            background: #1a1a1a;
+            color: white;
+            position: relative;
+            border: 2px solid #333;
+        }
+
+        .workshop-badge::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            animation: shimmer 4s infinite;
+        }
+
+        @keyframes shimmer {
+            0% {
+                left: -100%;
+            }
+
+            100% {
+                left: 100%;
+            }
+        }
+
+        .sketch-border {
+            border: 3px solid #000;
+            border-radius: 0;
+            position: relative;
+        }
+
+        .sketch-border::before {
+            content: '';
+            position: absolute;
+            top: -3px;
+            left: -3px;
+            right: -3px;
+            bottom: -3px;
+            border: 1px solid #666;
+            pointer-events: none;
+        }
+
+        .info-card {
+            background: rgba(255, 255, 255, 0.95);
+            border: 2px solid #e5e7eb;
+            backdrop-filter: blur(2px);
+        }
+
+        .hover-sketch {
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .hover-sketch:hover {
+            transform: translateY(-3px);
+            box-shadow:
+                0 12px 20px rgba(0, 0, 0, 0.1),
+                0 6px 12px rgba(0, 0, 0, 0.05);
+        }
+
+        .hover-sketch:hover::after {
+            opacity: 1;
+        }
+
+        .hover-sketch::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 10%;
+            right: 10%;
+            height: 3px;
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            filter: blur(2px);
+        }
+
+        .no-select {
+            user-select: none;
+            pointer-events: none;
+        }
     </style>
 </head>
 
 <body class="paper-texture">
     <!-- Header -->
-    <header class="pt-5 pb-16 relative">
+    <header class="pb-16 relative">
+        <div class="no-select">
+            <img src="./assets/man_drawing.png" alt="Workshop Image" class="w-full h-full object-cover">
+        </div>
+
         <div class="container mx-auto px-6">
+            <div class="max-w-5xl mx-auto text-center relative">
+                <div class="mb-8 -mt-32">
+                    <div class="mb-6"> <span class="text-xl text-gray-500"> SIGGRAPH 2025 WORKSHOP </span></div>
 
-            <!--Background Image and Decorations - Behind content-->
-            <div class="absolute bottom-10 opacity-20 no-select z-0">
-                <img src="./assets/man_drawing.png" alt="Workshop Image" class="mt-8 w-full  mx-auto">
-            </div>
-            <div class="absolute top-10 left-10 text-4xl transform -rotate-12 opacity-30 no-select z-0">✏️</div>
-            <div class="absolute top-20 right-16 text-3xl transform rotate-12 opacity-30 no-select z-0">📝</div>
-            <div class="absolute bottom-10 left-20 text-3xl transform rotate-45 opacity-30 no-select z-0">🎨</div>
-            <!--End Background-->
-
-            <!-- Main content - In front of background -->
-            <div class="max-w-5xl mx-auto text-center relative z-10">
-                <div class="inline-block mb-6 p-3 sketch-border bg-white">
-                    <span class="handwritten text-lg font-medium text-gray-800">SIGGRAPH 2025 Workshop</span>
+                    <h1 class="handwritten text-4xl md:text-6xl font-bold mb-2 leading-tight text-gray-900">
+                        <!-- Drawing and Sketching: -->
+                        DRAWING & SKETCHING:
+                    </h1>
+                    <h2 class="text-2xl md:text-3xl text-gray-800">
+                        Art, Psychology, and Computer Graphics
+                    </h2>
                 </div>
 
-                <h1 class="handwritten text-3xl md:text-6xl font-bold mb-4 leading-tight text-gray-900">
-                    Drawing and Sketching:
-                    <br>
-                    <span>Art, Psychology, and Computer Graphics</span>
-                </h1>
-
-                <div class="p-4 max-w-2xl mx-auto mb-4">
-                    <p class="text-xl md:text-2xl text-gray-700 font-medium">
-                        Exploring the intersection of human creativity and computational intelligence
-                    </p>
-                </div>
-
-                <div class="flex flex-col sm:flex-row gap-6 justify-center items-center text-2xl font-medium">
-                    <div class="sketch-border p-3 bg-white transform -rotate-1">
-                        <div class="flex items-center gap-2">
-                            <span class="text-2xl">⏰</span>
-                            3.5-hour Workshop
-                        </div>
-                    </div>
-                    <div class="sketch-border p-3 bg-white transform rotate-1">
-                        <div class="flex items-center gap-2">
-                            <span class="text-2xl">📍</span>
-                            SIGGRAPH 2025
-                        </div>
-                    </div>
-                </div>
                 <div class="p-6 mt-6 max-w-2xl mx-auto">
-                    <div class="text-center">
-                        <div class="text-4xl mb-3">📅</div>
-                        <div class="handwritten text-2xl font-bold text-gray-900 mb-2">
-                            Sunday, August 10th, 2025
+                    <div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+                        <div class="text-xl font-bold text-gray-900 sketch-border sketch-shadow p-4 bg-white transform -rotate-2">
+                            <div class="text-2xl mb-2">📅</div>
+                            <div>Date:</div>
+                            <div>Sunday, August 10th, 2025</div>
                         </div>
-                        <div class="text-xl text-gray-700 mb-2">
-                            9:00 AM - 12:30 PM PST
+                        <div class="text-xl font-bold text-gray-900 sketch-border sketch-shadow p-4 bg-white transform rotate-1">
+                            <div class="text-2xl mb-2">⏰</div>
+                            <div>Time:</div>
+                            <div>9:00 AM - 12:30 PM PST</div>
                         </div>
-                        <div class="text-lg text-gray-600">
-                            East Building, Room 11
+                        <div class="text-xl font-bold text-gray-900 sketch-border sketch-shadow p-4 bg-white transform -rotate-1">
+                            <div class="text-2xl mb-2">📍</div>
+                            <div>Location:</div>
+                            <div>East Building, Room 11</div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
     </header>
 
     <!-- Navigation -->
     <nav class="sticky top-0 z-40 py-4 bg-white border-t-2 border-b-2 border-dashed border-gray-300">
         <div class="container mx-auto px-6">
-            <div class="flex justify-center space-x-8 handwritten text-4xl font-medium">
+            <div class="flex justify-center space-x-8 handwritten text-2xl font-medium">
                 <a href="#overview" class="text-gray-700 hover:text-black border-b-2 border-transparent hover:border-black transition-all transform hover:-rotate-1">Overview</a>
                 <a href="#topics" class="text-gray-700 hover:text-black border-b-2 border-transparent hover:border-black transition-all transform hover:rotate-1">Topics</a>
                 <a href="#speakers" class="text-gray-700 hover:text-black border-b-2 border-transparent hover:border-black transition-all transform hover:-rotate-1">Speakers</a>
@@ -182,10 +283,8 @@
             <div class="max-w-4xl mx-auto keep-static">
                 <h2 class="handwritten text-4xl font-bold text-gray-900 mb-8 text-center">Workshop Overview</h2>
                 <div class="sketch-border p-8 mb-8 sketch-shadow">
-                    <p class="text-lg text-gray-700 leading-relaxed mb-6">
-                        Sketching is a fundamental form of expression that supports visual thinking, conceptual exploration, and communication across cultures, generations, and disciplines. This workshop brings together researchers and practitioners from computer graphics, AI, cognitive science, and the arts to explore the many dimensions of drawing—how people draw, how machines can draw, and how the two might draw together.
-                    </p>
                     <p class="text-lg text-gray-700 leading-relaxed">
+                        This workshop brings together researchers and practitioners from computer graphics, AI, cognitive science, and the arts to explore the many dimensions of drawing—how people draw, how machines can draw, and how the two might draw together. <br><br>
                         Our goal is to better understand drawing as both a cognitive process and a computational challenge, and to spark new ideas at the intersection of creativity, perception, and generative technologies.
                     </p>
                 </div>
@@ -209,13 +308,13 @@
                         <p class="text-gray-600 text-center">How people perceive, abstract, and translate what they see or imagine into marks on paper, touching on visual perception and individual drawing strategies.</p>
                     </div>
 
-                    <div class="sketch-border p-6 sketch-shadow transform rotate-2 hover:rotate-0 transition-transform">
+                    <div class="sketch-border p-6 sketch-shadow transform rotate-1 hover:rotate-0 transition-transform">
                         <div class="text-4xl mb-4 text-center">🤖</div>
                         <h3 class="handwritten text-xl font-bold text-gray-900 mb-3 text-center">Sketching as AI Input</h3>
                         <p class="text-gray-600 text-center">As generative models become part of creative workflows, sketching is emerging as a natural and intuitive way to guide them.</p>
                     </div>
 
-                    <div class="sketch-border p-6 sketch-shadow transform -rotate-2 hover:rotate-0 transition-transform">
+                    <div class="sketch-border p-6 sketch-shadow transform -rotate-1 hover:rotate-0 transition-transform">
                         <div class="text-4xl mb-4 text-center">⚡</div>
                         <h3 class="handwritten text-xl font-bold text-gray-900 mb-3 text-center">Generative Models</h3>
                         <p class="text-gray-600 text-center">Latest approaches for teaching machines to sketch, including models that generate or interpret sketches for technical and creative applications.</p>
@@ -249,30 +348,30 @@
                         <h3 class="handwritten text-3xl font-bold text-gray-800 text-center">Cognitive and Perceptual Foundations</h3>
                     </div>
                     <div class="grid md:grid-cols-3 gap-6">
-                        <div class="sketch-border p-6 text-center sketch-shadow transform -rotate-1 hover:rotate-0 transition-transform">
+                        <div class="sketch-border p-6 text-center sketch-shadowtransition-transform">
                             <div class="w-20 h-20 bg-gray-200 border-2 border-dashed border-gray-400 rounded-full flex items-center justify-center handwritten text-3xl font-bold mx-auto mb-4">
                                 JF
                             </div>
-                            <h4 class="handwritten text-xl font-bold text-gray-900 mb-2">Judith E. Fan</h4>
-                            <p class="text-gray-600 font-medium mb-3">Stanford University</p>
+                            <h4 class="handwritten text-2xl font-bold text-gray-900 mb-2">Judith E. Fan</h4>
+                            <p class="text-xl text-gray-600 font-medium mb-3">Stanford University</p>
                             <p class="text-gray-600 text-sm">Assistant Professor of Psychology directing the Cognitive Tools Lab, studying how people use external representations like drawings to support learning and problem-solving.</p>
                         </div>
 
-                        <div class="sketch-border p-6 text-center sketch-shadow transform rotate-1 hover:rotate-0 transition-transform">
+                        <div class="sketch-border p-6 text-center sketch-shadow transition-transform">
                             <div class="w-20 h-20 bg-gray-200 border-2 border-dashed border-gray-400 rounded-full flex items-center justify-center handwritten text-3xl font-bold mx-auto mb-4">
                                 KC
                             </div>
-                            <h4 class="handwritten text-xl font-bold text-gray-900 mb-2">Kartik Chandra</h4>
-                            <p class="text-gray-600 font-medium mb-3">MIT</p>
+                            <h4 class="handwritten text-2xl font-bold text-gray-900 mb-2">Kartik Chandra</h4>
+                            <p class="text-xl text-gray-600 font-medium mb-3">MIT</p>
                             <p class="text-gray-600 text-sm">PhD student connecting computer graphics and cognitive science to understand the foundations of non-photorealistic depiction.</p>
                         </div>
 
-                        <div class="sketch-border p-6 text-center sketch-shadow transform -rotate-1 hover:rotate-0 transition-transform">
+                        <div class="sketch-border p-6 text-center sketch-shadow transition-transform">
                             <div class="w-20 h-20 bg-gray-200 border-2 border-dashed border-gray-400 rounded-full flex items-center justify-center handwritten text-3xl font-bold mx-auto mb-4">
                                 AH
                             </div>
-                            <h4 class="handwritten text-xl font-bold text-gray-900 mb-2">Aaron Hertzmann</h4>
-                            <p class="text-gray-600 font-medium mb-3">Adobe Research</p>
+                            <h4 class="handwritten text-2xl font-bold text-gray-900 mb-2">Aaron Hertzmann</h4>
+                            <p class="text-xl text-gray-600 font-medium mb-3">Adobe Research</p>
                             <p class="text-gray-600 text-sm">Principal Scientist exploring the intersection of computer graphics, machine learning, and art, pioneering techniques in stylization and rendering.</p>
                         </div>
                     </div>
@@ -284,30 +383,30 @@
                         <h3 class="handwritten text-3xl font-bold text-gray-800 text-center">Computational Tools and Generative Models</h3>
                     </div>
                     <div class="grid md:grid-cols-3 gap-6">
-                        <div class="sketch-border p-6 text-center sketch-shadow transform rotate-1 hover:rotate-0 transition-transform">
+                        <div class="sketch-border p-6 text-center sketch-shadow transition-transform">
                             <div class="w-20 h-20 bg-gray-200 border-2 border-dashed border-gray-400 rounded-full flex items-center justify-center handwritten text-3xl font-bold mx-auto mb-4">
                                 MA
                             </div>
-                            <h4 class="handwritten text-xl font-bold text-gray-900 mb-2">Maneesh Agrawala</h4>
-                            <p class="text-gray-600 font-medium mb-3">Stanford University</p>
+                            <h4 class="handwritten text-2xl font-bold text-gray-900 mb-2">Maneesh Agrawala</h4>
+                            <p class="text-2xl text-gray-600 font-medium mb-3">Stanford University</p>
                             <p class="text-gray-600 text-sm">Professor of Computer Science and Director of the Brown Institute, focusing on computer graphics, HCI, and visualization with cognitive design principles.</p>
                         </div>
 
-                        <div class="sketch-border p-6 text-center sketch-shadow transform -rotate-1 hover:rotate-0 transition-transform">
+                        <div class="sketch-border p-6 text-center sketch-shadow transition-transform">
                             <div class="w-20 h-20 bg-gray-200 border-2 border-dashed border-gray-400 rounded-full flex items-center justify-center handwritten text-3xl font-bold mx-auto mb-4">
                                 HF
                             </div>
-                            <h4 class="handwritten text-xl font-bold text-gray-900 mb-2">Hongbo Fu</h4>
-                            <p class="text-gray-600 font-medium mb-3">HKUST</p>
+                            <h4 class="handwritten text-2xl font-bold text-gray-900 mb-2">Hongbo Fu</h4>
+                            <p class="text-xl text-gray-600 font-medium mb-3">HKUST</p>
                             <p class="text-gray-600 text-sm">Professor and Acting Head of the Division of Arts and Machine Creativity, making sketching a powerful and accessible tool for interaction and design.</p>
                         </div>
 
-                        <div class="sketch-border p-6 text-center sketch-shadow transform rotate-1 hover:rotate-0 transition-transform">
+                        <div class="sketch-border p-6 text-center sketch-shadow ">
                             <div class="w-20 h-20 bg-gray-200 border-2 border-dashed border-gray-400 rounded-full flex items-center justify-center handwritten text-3xl font-bold mx-auto mb-4">
                                 PS
                             </div>
-                            <h4 class="handwritten text-xl font-bold text-gray-900 mb-2">Peter Schaldenbrand</h4>
-                            <p class="text-gray-600 font-medium mb-3">Carnegie Mellon University</p>
+                            <h4 class="handwritten text-2xl font-bold text-gray-900 mb-2">Peter Schaldenbrand</h4>
+                            <p class="text-2xl text-gray-600 font-medium mb-3">Carnegie Mellon University</p>
                             <p class="text-gray-600 text-sm">PhD candidate at the Robotics Institute creating collaborative AI and robotic assistants for real-world acts of creativity like painting and sculpting.</p>
                         </div>
                     </div>
@@ -376,7 +475,6 @@
 
                     <div class="mt-8 sketch-border p-4 bg-gray-50 text-center">
                         <p class="handwritten text-xl font-bold text-gray-900">Total Duration: 3.5 Hours</p>
-                        <p class="text-gray-600">An interdisciplinary exploration of drawing in the age of AI</p>
                     </div>
                 </div>
             </div>
