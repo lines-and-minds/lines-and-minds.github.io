@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lines and Minds: Visual Abstraction in Art, Psychology, and Computer Graphics - SIGGRAPH 2026</title>
+    <title>Drawing and Sketching: Art, Psychology, and Computer Graphics - SIGGRAPH 2025</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YHDF2RQBJF"></script>
@@ -357,13 +357,13 @@
                 <!-- <div class="max-w-4xl mx-auto text-center relative mt-10"> -->
                 <!-- Tagline -->
                 <p class="handwritten text-xl md:text-2xl text-gray-600 mb-4">
-                    SIGGRAPH 2026 Workshop
+                    SIGGRAPH 2025 Workshop
                 </p>
 
                 <!-- Title -->
                 <h1 class="handwritten text-3xl sm:text-5xl font-bold leading-tight text-gray-900 mb-10">
 
-                    Lines and Minds: <br>Visual Abstraction in Art, Psychology, <br>and Computer Graphics
+                    Drawing & Sketching: <br>Art, Psychology, and Computer Graphics
                 </h1>
 
                 <!-- Subtitle -->
@@ -379,11 +379,16 @@
                     <path class="pencil-stroke-light" d="M12,11 Q52,9 102,13 T202,10 T302,12 T388,11" filter="url(#pencilTexture1)" />
                 </svg>
 
-                <p class="handwritten text-xl md:text-2xl text-red-500 mb-6">
-                    Date TBD <br>
-                    Time TBD <br>
-                    Location TBD <br>
+                <p class="handwritten text-xl md:text-2xl text-gray-700 mb-6">
+                    <!-- 📅<br> -->
+                    Sunday, August 10th, 2025 <br>
+                    2:00pm - 5:15pm PDT <br>
+                    East Building, Room 11 <br>
                 </p>
+
+                <a href="https://s2025.conference-schedule.org/?filter1=evtt109" target="_blank" class="ml-3 inline-block px-3 py-1 text-lg rounded-xl bg-gray-100 text-gray-700 hover:bg-gray-800 transition hover:text-white">
+                    Add to calendar →
+                </a>
             </div>
         </div>
 
@@ -425,9 +430,9 @@
 
                 <!-- <div class="sketch-border p-8 mb-8 sketch-shadow"> -->
                 <p class="text-base sm:text-xl text-gray-700 leading-relaxed">
-                    Visual abstraction — from sketches and diagrams to icons and comics — enables people to communicate, express, and create by distilling complex visual information into simplified forms that preserve essential meaning.
-                    This workshop brings together researchers from computer graphics, cognitive science, and the visual arts to examine abstraction as a cognitive mechanism, a communicative tool, and a computational challenge.
-                    We explore questions such as: Why and how do people abstract? What makes a simplification effective? How can machines learn to abstract in ways aligned with human perception? And as AI excels at generating realistic images, what role might abstraction play in how humans and AI create together?
+                    This workshop brings together researchers and practitioners from computer graphics, AI, cognitive science, and the arts to explore the many dimensions of drawing—how people draw, how machines can draw, and how the two might draw together.
+                    <!-- <br><br> -->
+                    Our goal is to better understand drawing as both a cognitive process and a computational challenge, and to spark new ideas at the intersection of creativity, perception, and generative technologies.
                 </p>
                 <!-- </div> -->
             </div>
@@ -439,7 +444,7 @@
         <!-- Speakers Section -->
         <section id="speakers" class="mb-20 scroll-mt-24">
             <div class="max-w-6xl mx-auto">
-                <h2 class="handwritten text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">Invited Speakers & Panelist</h2>
+                <h2 class="handwritten text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">Invited Speakers</h2>
 
                 <svg class="sketchy-line mb-6" viewBox="0 0 400 20">
                     <defs>
@@ -455,17 +460,20 @@
 
 
                 <div class="mb-12 flex justify-center">
-                    <div class="grid md:grid-cols-2 gap-6">
+                    <div class="grid md:grid-cols-3 gap-6">
 
                         <div class="text-center transition-transform max-w-xs">
                             <div class="w-32 h-32 rounded-full overflow-hidden border-2 border-gray-400 mx-auto mb-4 relative">
-                                <img src="images/barbara.jpeg" alt="Profile picture" class="w-full h-full object-cover">
+                                <img src="images/judy.jpg" alt="Profile picture" class="w-full h-full object-cover transition-opacity duration-300 hover:opacity-0">
+                                <img src="images/judy_sketch.png" alt="Profile picture hover" class="w-full h-full object-cover absolute inset-0 opacity-0 transition-opacity duration-300 hover:opacity-100">
                             </div>
-                            <h4 class="handwritten text-2xl font-bold text-gray-900 mb-2">Barbara Tversky</h4>
-                            <p class="text-xl text-gray-600 font-medium mb-2">Stanford / Columbia University</p>
-                            <p class="text-sm text-gray-700 bg-white border border-gray-300 px-3 py-1 inline-block mb-3 -rotate-2">Speaker</p>
-                            <p class="text-gray-600 text-sm">Professor Emerita of Psychology studying spatial thinking, diagrammatic reasoning, and gesture — how people use simplified visual representations to think and communicate. Author of <i>Mind in Motion</i>.</p>
+                            <a href="https://profiles.stanford.edu/judith-fan" target="_blank" class="hover:underline">
+                                <h4 class="handwritten text-2xl font-bold text-gray-900 mb-2">Judith E. Fan</h4>
+                            </a>
+                            <p class="text-xl text-gray-600 font-medium mb-3">Stanford University</p>
+                            <p class="text-gray-600 text-sm">Assistant Professor of Psychology directing the Cognitive Tools Lab, studying how people use external representations like drawings to support learning and problem-solving.</p>
                         </div>
+
 
                         <div class="text-center transition-transform max-w-xs">
                             <div class="w-32 h-32 rounded-full overflow-hidden border-2 border-gray-400 mx-auto mb-4 relative">
@@ -475,30 +483,60 @@
                             <a href="https://www.dgp.toronto.edu/~hertzman/" target="_blank" class="hover:underline">
                                 <h4 class="handwritten text-2xl font-bold text-gray-900 mb-2">Aaron Hertzmann</h4>
                             </a>
-                            <p class="text-xl text-gray-600 font-medium mb-2">Adobe Research</p>
-                            <p class="text-sm text-gray-700 bg-white border border-gray-300 px-3 py-1 inline-block mb-3 rotate-1">Speaker</p>
+                            <p class="text-xl text-gray-600 font-medium mb-3">Adobe Research</p>
                             <p class="text-gray-600 text-sm">Principal Scientist exploring the intersection of computer graphics, machine learning, and art, pioneering techniques in stylization and rendering.</p>
                         </div>
 
                         <div class="text-center transition-transform max-w-xs">
                             <div class="w-32 h-32 rounded-full overflow-hidden border-2 border-gray-400 mx-auto mb-4 relative">
-                                <img src="images/rubaiat.jpg" alt="Profile picture" class="w-full h-full object-cover">
+                                <img src="images/maneesh.jpeg" alt="Profile picture" class="w-full h-full object-cover transition-opacity duration-300 hover:opacity-0">
+                                <img src="images/maneesh_sketch.png" alt="Profile picture hover" class="w-full h-full object-cover absolute inset-0 opacity-0 transition-opacity duration-300 hover:opacity-100">
                             </div>
-                            <h4 class="handwritten text-2xl font-bold text-gray-900 mb-2">Rubaiat Habib</h4>
-                            <p class="text-xl text-gray-600 font-medium mb-2">Adobe Research</p>
-                            <p class="text-sm text-gray-700 bg-white border border-gray-300 px-3 py-1 inline-block mb-3 rotate-3">Speaker</p>
-                            <p class="text-gray-600 text-sm">Senior Research Scientist at the intersection of HCI and computer graphics, focusing on sketch-based interfaces, dynamic drawings, and tools for visual expression. Creator of SketchBook Motion and contributor to Adobe Character Animator.</p>
+                            <a href="https://graphics.stanford.edu/~maneesh/" target="_blank" class="hover:underline">
+                                <h4 class="handwritten text-2xl font-bold text-gray-900 mb-2">Maneesh Agrawala</h4>
+                            </a>
+
+                            <p class="text-xl text-gray-600 font-medium mb-3">Stanford University</p>
+                            <p class="text-gray-600 text-sm">Professor of Computer Science and Director of the Brown Institute, focusing on computer graphics, HCI, and visualization with cognitive design principles.</p>
                         </div>
 
                         <div class="text-center transition-transform max-w-xs">
                             <div class="w-32 h-32 rounded-full overflow-hidden border-2 border-gray-400 mx-auto mb-4 relative">
-                                <img src="images/scott.png" alt="Profile picture" class="w-full h-full object-cover">
+                                <img src="images/hongbo.png" alt="Profile picture" class="w-full h-full object-cover transition-opacity duration-300 hover:opacity-0">
+                                <img src="images/hongbo_sketch.png" alt="Profile picture hover" class="w-full h-full object-cover absolute inset-0 opacity-0 transition-opacity duration-300 hover:opacity-100">
                             </div>
-                            <h4 class="handwritten text-2xl font-bold text-gray-900 mb-2">Scott McCloud</h4>
-                            <p class="text-xl text-gray-600 font-medium mb-2">Cartoonist & Comics Theorist</p>
-                            <p class="text-sm text-gray-700 bg-white border border-gray-300 px-3 py-1 inline-block mb-3 -rotate-1">Panelist</p>
-                            <p class="text-gray-600 text-sm">Cartoonist and theorist best known for <i>Understanding Comics: The Invisible Art</i>. His analysis of iconic abstraction, closure, and "amplification through simplification" has influenced fields from illustration to interface design.</p>
+                            <a href="https://hongbofu.people.ust.hk/" target="_blank" class="hover:underline">
+                                <h4 class="handwritten text-2xl font-bold text-gray-900 mb-2">Hongbo Fu</h4>
+                            </a>
+                            <p class="text-xl text-gray-600 font-medium mb-3">HKUST</p>
+                            <p class="text-gray-600 text-sm">Professor and Acting Head of the Division of Arts and Machine Creativity, making sketching a powerful and accessible tool for interaction and design.</p>
                         </div>
+
+
+                        <div class="text-center transition-transform max-w-xs">
+                            <div class="w-32 h-32 rounded-full overflow-hidden border-2 border-gray-400 mx-auto mb-4 relative">
+                                <img src="images/kartik.jpeg" alt="Profile picture" class="w-full h-full object-cover transition-opacity duration-300 hover:opacity-0">
+                                <img src="images/kartik_sketch.png" alt="Profile picture hover" class="w-full h-full object-cover absolute inset-0 opacity-0 transition-opacity duration-300 hover:opacity-100">
+                            </div>
+                            <a href="https://cs.stanford.edu/~kach/" target="_blank" class="hover:underline">
+                                <h4 class="handwritten text-2xl font-bold text-gray-900 mb-2">Kartik Chandra</h4>
+                            </a>
+                            <p class="text-xl text-gray-600 font-medium mb-3">MIT</p>
+                            <p class="text-gray-600 text-sm">PhD student connecting computer graphics and cognitive science to understand the foundations of non-photorealistic depiction.</p>
+                        </div>
+
+                        <div class="text-center transition-transform max-w-xs">
+                            <div class="w-32 h-32 rounded-full overflow-hidden border-2 border-gray-400 mx-auto mb-4 relative">
+                                <img src="images/peter.jpg" alt="Profile picture" class="w-full h-full object-cover transition-opacity duration-300 hover:opacity-0">
+                                <img src="images/peter_sketch.png" alt="Profile picture hover" class="w-full h-full object-cover absolute inset-0 opacity-0 transition-opacity duration-300 hover:opacity-100">
+                            </div>
+                            <a href="https://pschaldenbrand.github.io/" target="_blank" class="hover:underline">
+                                <h4 class="handwritten text-2xl font-bold text-gray-900 mb-2">Peter Schaldenbrand</h4>
+                            </a>
+                            <p class="text-xl text-gray-600 font-medium mb-3">Carnegie Mellon University</p>
+                            <p class="text-gray-600 text-sm">PhD candidate at the Robotics Institute creating collaborative AI and robotic assistants for real-world acts of creativity like painting and sculpting.</p>
+                        </div>
+
 
                     </div>
                 </div>
@@ -527,37 +565,53 @@
                     <path class="pencil-stroke-light" d="M12,11 Q52,9 102,13 T202,10 T302,12 T388,11" filter="url(#pencilTexture2)" />
                 </svg>
 
-                <div class="grid sm:grid-cols-2 gap-6">
+                <div class="grid sm:grid-cols-3 gap-6">
                     <div class="transform sm:rotate-1 hover:rotate-0 transition-transform">
                         <div class="text-4xl mb-4 text-center">
                             <img src="./assets/brain.png" alt="Brain Icon" class="w-24 h-24 drop-shadow-lg mx-auto">
                         </div>
-                        <h3 class="handwritten text-xl font-bold text-gray-900 mb-3 text-center">The Psychology of Abstraction</h3>
-                        <p class="text-gray-600 text-center">Why do people abstract, and how? We explore how humans perceive, produce, and use simplified visual representations — examining the cognitive mechanisms that make abstraction effective, and how expertise shapes these processes.</p>
+                        <h3 class="handwritten text-xl font-bold text-gray-900 mb-3 text-center">Cognitive & Psychological Aspects</h3>
+                        <p class="text-gray-600 text-center">How does drawing help us think, remember, or solve problems? We'll explore sketching as a cognitive tool and what it reveals about visual information processing.</p>
                     </div>
 
                     <div class="transform sm:-rotate-1 hover:rotate-0 transition-transform">
                         <div class="text-4xl mb-4 text-center">
                             <img src="./assets/eye.png" alt="Eye Icon" class="w-24 h-24 drop-shadow-lg mx-auto">
                         </div>
-                        <h3 class="handwritten text-xl font-bold text-gray-900 mb-3 text-center">The Language of Abstraction</h3>
-                        <p class="text-gray-600 text-center">Lines, dots, arrows, boxes, gestures: how do simple visual elements carry meaning? We examine abstraction as a form of communication — from diagrams to comics — asking whether there are shared principles underlying how we read and make pictures.</p>
+                        <h3 class="handwritten text-xl font-bold text-gray-900 mb-3 text-center">Perception & Drawing</h3>
+                        <p class="text-gray-600 text-center">How people perceive, abstract, and translate what they see or imagine into marks on paper, touching on visual perception and individual drawing strategies.</p>
                     </div>
 
                     <div class="transform sm:rotate-1 hover:rotate-0 transition-transform">
                         <div class="text-4xl mb-4 text-center">
                             <img src="./assets/robot.png" alt="Robot Icon" class="w-24 h-24 drop-shadow-lg mx-auto">
                         </div>
-                        <h3 class="handwritten text-xl font-bold text-gray-900 mb-3 text-center">Computational Visual Abstraction</h3>
-                        <p class="text-gray-600 text-center">How can computational systems understand and generate abstract visual representations? We explore the challenges of designing tools that interpret simplified input, produce meaningful visual output, and support human visual thinking.</p>
+                        <h3 class="handwritten text-xl font-bold text-gray-900 mb-3 text-center">Sketching as AI Input</h3>
+                        <p class="text-gray-600 text-center">As generative models become part of creative workflows, sketching is emerging as a natural and intuitive way to guide them.</p>
                     </div>
 
                     <div class="transform sm:-rotate-1 hover:rotate-0 transition-transform">
                         <div class="text-4xl mb-4 text-center">
+                            <img src="./assets/lightning.png" alt="Generative Icon" class="w-24 h-24 drop-shadow-lg mx-auto">
+                        </div>
+                        <h3 class="handwritten text-xl font-bold text-gray-900 mb-3 text-center">Generative Models</h3>
+                        <p class="text-gray-600 text-center">Latest approaches for teaching machines to sketch, including models that generate or interpret sketches for technical and creative applications.</p>
+                    </div>
+
+                    <div class="transform sm:rotate-1 hover:rotate-0 transition-transform">
+                        <div class="text-4xl mb-4 text-center">
                             <img src="./assets/handshake.png" alt="Collaboration Icon" class="w-24 h-24 drop-shadow-lg mx-auto">
                         </div>
-                        <h3 class="handwritten text-xl font-bold text-gray-900 mb-3 text-center">Abstraction & Human-AI Collaboration</h3>
-                        <p class="text-gray-600 text-center">Simplified visuals — sketches, gestures, diagrams — offer natural ways to communicate intent. We examine how abstraction can serve as an interface between humans and machines, supporting clearer communication, interpretability, and more human-aligned outputs.</p>
+                        <h3 class="handwritten text-xl font-bold text-gray-900 mb-3 text-center">Drawing Machines</h3>
+                        <p class="text-gray-600 text-center">The growing role of machines and robots in sketching—both as autonomous creators and as collaborators in new forms of expression.</p>
+                    </div>
+
+                    <div class="transform sm:-rotate-1 hover:rotate-0 transition-transform">
+                        <div class="text-4xl mb-4 text-center">
+                            <img src="./assets/rocket.png" alt="Future Icon" class="w-24 h-24 drop-shadow-lg mx-auto">
+                        </div>
+                        <h3 class="handwritten text-xl font-bold text-gray-900 mb-3 text-center">Future of Co-Creation</h3>
+                        <p class="text-gray-600 text-center">What does it mean to co-create with a machine? How might robots participate in drawing and what new forms of interaction could emerge?</p>
                     </div>
                 </div>
             </div>
@@ -581,13 +635,19 @@
 
                 <div class="sketch-border p-8 sketch-shadow">
                     <div class="space-y-6">
-                        <div class="sm:flex items-start gap-4">
+                        <div class="sm:flex items-start gap-4 ">
                             <div class="flex-shrink-0 flex justify-center mb-4">
                                 <img src="./assets/brain.png" alt="Brain Icon" class="w-24 h-24 drop-shadow-lg">
                             </div>
                             <div class="flex-1">
-                                <h3 class="handwritten text-center sm:text-left text-xl font-bold text-gray-900 mb-2">Introduction</h3>
-                                <p class="text-gray-600 mb-3">Brief framing of the key questions around visual abstraction and communication</p>
+                                <h3 class="handwritten text-center sm:text-left text-xl font-bold text-gray-900 mb-2">Block 1: Cognitive and Perceptual Foundations</h3>
+                                <p class="text-gray-600 mb-3">Three 30-minute talks exploring the psychological and cognitive aspects of drawing</p>
+                                <div class="text-base text-gray-600 space-y-1 mb-3">
+                                    <p>• [2:00 - 2:30pm] Kartik Chandra - <i><b>Why paint a bird? Why do anything at all?</b></i></p>
+                                    <p>• [2:30 - 3:00pm] Judith E. Fan - <i><b>Drawing as a Versatile Cognitive Tool</b></i> </p>
+                                    <p>• [3:00 - 3:30pm] Aaron Hertzmann - <i><b>Per-Fixation Perspective in Art and Photography</b></i> </p>
+                                </div>
+                                <p class="text-gray-500 mb-3">10-minute Q&A and Discussion</p>
                             </div>
                         </div>
 
@@ -596,13 +656,14 @@
                                 <img src="./assets/laptop.png" alt="Laptop Icon" class="w-24 h-24 drop-shadow-lg">
                             </div>
                             <div class="flex-1">
-                                <h3 class="handwritten text-center sm:text-left text-xl font-bold text-gray-900 mb-2">Invited Talks</h3>
-                                <p class="text-gray-600 mb-3">Three 40-minute talks spanning computational, cognitive, and interactive perspectives on visual abstraction</p>
-                                <div class="text-base space-y-1 mb-3">
-                                    <p class="text-gray-600">• Barbara Tversky — <i class="text-red-500">Talk title TBD</i></p>
-                                    <p class="text-gray-600">• Aaron Hertzmann — <i class="text-red-500">Talk title TBD</i></p>
-                                    <p class="text-gray-600">• Rubaiat Habib — <i class="text-red-500">Talk title TBD</i></p>
+                                <h3 class="handwritten text-center sm:text-left text-xl font-bold text-gray-900 mb-2">Block 2: Computational Tools and Generative Models</h3>
+                                <p class="text-gray-600 mb-3">Three 30-minute talks on AI-driven sketching and co-creative systems</p>
+                                <div class="text-base text-gray-600 space-y-1 mb-3">
+                                    <p>• [3:40 - 4:10pm] Maneesh Agrawala - <i><b>Generative AI Tools for Drawing and Sketching</b></i></p>
+                                    <p>• [4:10 - 4:40pm] Hongbo Fu - <i><b>Character Animation from Sketch to Life</b></i></p>
+                                    <p>• [4:40 - 5:10pm] Peter Schaldenbrand - <i><b>Robotic Creativity and Co-Creation</b></i></p>
                                 </div>
+                                <p class="text-gray-500 mb-3">10-minute Q&A and Discussion</p>
                             </div>
                         </div>
 
@@ -611,24 +672,14 @@
                                 <img src="./assets/thought.png" alt="Thought Icon" class="w-24 h-24 drop-shadow-lg">
                             </div>
                             <div class="flex-1">
-                                <h3 class="handwritten text-center sm:text-left text-xl font-bold text-gray-900 mb-2">Panel Discussion</h3>
-                                <p class="text-gray-600 mb-3">50-minute moderated panel with speakers and Scott McCloud, reflecting on connections across the talks, engaging with audience questions, and identifying future directions</p>
-                            </div>
-                        </div>
-
-                        <div class="sm:flex items-start gap-4">
-                            <div class="flex-shrink-0 flex justify-center mb-4">
-                                <img src="./assets/handshake.png" alt="Discussion Icon" class="w-24 h-24 drop-shadow-lg">
-                            </div>
-                            <div class="flex-1">
-                                <h3 class="handwritten text-center sm:text-left text-xl font-bold text-gray-900 mb-2">Open Discussion</h3>
-                                <p class="text-gray-600">Attendees reflect on connections, share perspectives from their own disciplines, and identify promising directions for future research and collaboration</p>
+                                <h3 class="handwritten text-center sm:text-left text-xl font-bold text-gray-900 mb-2">Open Discussion and Future Directions</h3>
+                                <p class="text-gray-600">Interactive session for attendees to reflect on talks, share perspectives, and propose future collaboration opportunities across disciplines</p>
                             </div>
                         </div>
                     </div>
 
                     <div class="mt-4 text-center">
-                        <p class="handwritten text-lg font-semibold text-gray-800">Half-Day Session</p>
+                        <p class="handwritten text-lg font-semibold text-gray-800">Total Duration: 3.5 Hours</p>
                     </div>
                 </div>
             </div>
@@ -651,19 +702,22 @@
                     <path class="pencil-stroke" d="M10,10 Q50,8 100,12 T200,9 T300,11 T390,10" filter="url(#pencilTexture2)" />
                     <path class="pencil-stroke-light" d="M12,11 Q52,9 102,13 T202,10 T302,12 T388,11" filter="url(#pencilTexture2)" />
                 </svg>
-                <div class="grid md:grid-cols-3 gap-12">
+                <div class="grid md:grid-cols-2 gap-16">
                     <div class="text-center hover:rotate-0 transition-transform">
                         <div class="w-32 h-32 rounded-full overflow-hidden border-2 border-gray-400 mx-auto mb-4 relative">
                             <img src="images/yael.png" alt="Profile picture" class="w-full h-full object-cover transition-opacity duration-300 hover:opacity-0">
                             <img src="images/yael_sketch.png" alt="Profile picture hover" class="w-full h-full object-cover absolute inset-0 opacity-0 transition-opacity duration-300 hover:opacity-100">
                         </div>
                         <a href="https://yael-vinker.github.io/website/" target="_blank" class="hover:underline">
-                            <h3 class="handwritten text-2xl font-bold text-gray-900 mb-2">Yael Vinker</h3>
+                            <h3 class="handwritten text-3xl font-bold text-gray-900 mb-2">Yael Vinker</h3>
                         </a>
-                        <p class="text-lg text-gray-600 font-medium mb-3">MIT CSAIL</p>
+                        <p class="text-xl text-gray-600 font-medium mb-3">MIT CSAIL</p>
                         <p class="text-gray-600 leading-relaxed text-sm">
-                            Postdoctoral Associate working with Prof. Antonio Torralba at the intersection of computer graphics, visual design, and AI, with key contributions to generative sketching and visual abstraction.
+                            Postdoctoral Associate working with Prof. Antonio Torralba at the intersection of computer graphics, visual communication, and AI. Her research focuses on developing computational tools that support visual thinking, communication, and creative expression, with key contributions to generative sketching and visual abstraction.
                         </p>
+                        <div class="mt-4">
+                            <span class="handwritten text-gray-700 font-medium">yaelvink@mit.edu</span>
+                        </div>
                     </div>
 
                     <div class="text-center hover:rotate-0 transition-transform">
@@ -672,68 +726,15 @@
                             <img src="images/mia_sketch.png" alt="Profile picture hover" class="w-full h-full object-cover absolute inset-0 opacity-0 transition-opacity duration-300 hover:opacity-100">
                         </div>
                         <a href="https://www.mia-tang.com/" target="_blank" class="hover:underline">
-                            <h3 class="handwritten text-2xl font-bold text-gray-900 mb-2">Mia Tang</h3>
+                            <h3 class="handwritten text-3xl font-bold text-gray-900 mb-2">Mia Tang</h3>
                         </a>
-                        <p class="text-lg text-gray-600 font-medium mb-3">Stanford University</p>
+                        <p class="text-xl text-gray-600 font-medium mb-3">Stanford University</p>
                         <p class="text-gray-600 leading-relaxed text-sm">
-                            Ph.D. student working with Prof. Maneesh Agrawala on generative models for visual expression, focusing on interactive, controllable AI systems that use sketches to support creative tasks.
+                            Incoming Ph.D. student working with Prof. Maneesh Agrawala on generative models for visual expression. Her research focuses on interactive, controllable AI systems, including those that use sketches to support creative tasks such as generation and exploration.
                         </p>
-                    </div>
-
-                    <div class="text-center hover:rotate-0 transition-transform">
-                        <div class="w-32 h-32 rounded-full overflow-hidden border-2 border-gray-400 mx-auto mb-4 relative">
-                            <img src="images/kartik.jpeg" alt="Profile picture" class="w-full h-full object-cover transition-opacity duration-300 hover:opacity-0">
-                            <img src="images/kartik_sketch.png" alt="Profile picture hover" class="w-full h-full object-cover absolute inset-0 opacity-0 transition-opacity duration-300 hover:opacity-100">
+                        <div class="mt-4">
+                            <span class="handwritten text-gray-700 font-medium">miatang@stanford.edu</span>
                         </div>
-                        <a href="https://cs.stanford.edu/~kach/" target="_blank" class="hover:underline">
-                            <h3 class="handwritten text-2xl font-bold text-gray-900 mb-2">Kartik Chandra</h3>
-                        </a>
-                        <p class="text-lg text-gray-600 font-medium mb-3">MIT</p>
-                        <p class="text-gray-600 leading-relaxed text-sm">
-                            PhD student connecting big ideas from computer graphics and cognitive science to understand the foundations of non-photorealistic depiction.
-                        </p>
-                    </div>
-
-                    <div class="text-center hover:rotate-0 transition-transform">
-                        <div class="w-32 h-32 rounded-full overflow-hidden border-2 border-gray-400 mx-auto mb-4 relative">
-                            <img src="images/maneesh.jpeg" alt="Profile picture" class="w-full h-full object-cover transition-opacity duration-300 hover:opacity-0">
-                            <img src="images/maneesh_sketch.png" alt="Profile picture hover" class="w-full h-full object-cover absolute inset-0 opacity-0 transition-opacity duration-300 hover:opacity-100">
-                        </div>
-                        <a href="https://graphics.stanford.edu/~maneesh/" target="_blank" class="hover:underline">
-                            <h3 class="handwritten text-2xl font-bold text-gray-900 mb-2">Maneesh Agrawala</h3>
-                        </a>
-                        <p class="text-lg text-gray-600 font-medium mb-3">Stanford University</p>
-                        <p class="text-gray-600 leading-relaxed text-sm">
-                            Professor of Computer Science and Director of the Brown Institute, focusing on computer graphics, HCI, and visualization with cognitive design principles.
-                        </p>
-                    </div>
-
-                    <div class="text-center hover:rotate-0 transition-transform">
-                        <div class="w-32 h-32 rounded-full overflow-hidden border-2 border-gray-400 mx-auto mb-4 relative">
-                            <img src="images/judy.jpg" alt="Profile picture" class="w-full h-full object-cover transition-opacity duration-300 hover:opacity-0">
-                            <img src="images/judy_sketch.png" alt="Profile picture hover" class="w-full h-full object-cover absolute inset-0 opacity-0 transition-opacity duration-300 hover:opacity-100">
-                        </div>
-                        <a href="https://profiles.stanford.edu/judith-fan" target="_blank" class="hover:underline">
-                            <h3 class="handwritten text-2xl font-bold text-gray-900 mb-2">Judith E. Fan</h3>
-                        </a>
-                        <p class="text-lg text-gray-600 font-medium mb-3">Stanford University</p>
-                        <p class="text-gray-600 leading-relaxed text-sm">
-                            Assistant Professor of Psychology directing the Cognitive Tools Lab, studying how people use external representations like drawings to support learning, communication, and problem-solving.
-                        </p>
-                    </div>
-
-                    <div class="text-center hover:rotate-0 transition-transform">
-                        <div class="w-32 h-32 rounded-full overflow-hidden border-2 border-gray-400 mx-auto mb-4 relative">
-                            <img src="images/aaron.jpg" alt="Profile picture" class="w-full h-full object-cover transition-opacity duration-300 hover:opacity-0">
-                            <img src="images/aaron_sketch.png" alt="Profile picture hover" class="w-full h-full object-cover absolute inset-0 opacity-0 transition-opacity duration-300 hover:opacity-100">
-                        </div>
-                        <a href="https://www.dgp.toronto.edu/~hertzman/" target="_blank" class="hover:underline">
-                            <h3 class="handwritten text-2xl font-bold text-gray-900 mb-2">Aaron Hertzmann</h3>
-                        </a>
-                        <p class="text-lg text-gray-600 font-medium mb-3">Adobe Research</p>
-                        <p class="text-gray-600 leading-relaxed text-sm">
-                            Principal Scientist exploring the intersection of computer graphics, machine learning, and art, pioneering techniques in stylization and rendering.
-                        </p>
                     </div>
                 </div>
             </div>
@@ -742,7 +743,7 @@
         <!-- Target Audience -->
         <section class="mb-8 scroll-mt-24">
             <div class="max-w-3xl mx-auto">
-                <h2 class="handwritten text-3xl sm:text-4xl font-bold mb-4 text-gray-900 text-center">Join Us at SIGGRAPH 2026</h2>
+                <h2 class="handwritten text-3xl sm:text-4xl font-bold mb-4 text-gray-900 text-center">Join Us at SIGGRAPH 2025</h2>
                 <svg class="sketchy-line mb-6" viewBox="0 0 400 20">
                     <defs>
                         <filter id="pencilTexture2" x="0" y="0" width="100%" height="100%">
@@ -756,7 +757,8 @@
                 </svg>
                 <div class="">
                     <p class="text-gray-700 leading-relaxed mb-6 text-center font-medium">
-                        This workshop is for anyone interested in visual abstraction — sketches, drawings, diagrams, icons, comics, and other simplified visual forms — whether as a subject of scientific study, a creative practice, or a computational challenge.
+                        This workshop is for anyone interested in drawing as a creative, cognitive, and/or computational process.
+                        Whether you're analyzing strokes, designing interactions, or training models, we welcome all curious minds.
                     </p>
                     <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
                         <div class="text-center p-4 transform -rotate-2 hover:rotate-0 transition-transform">
@@ -796,14 +798,13 @@
         <div class="container mx-auto px-6">
             <div class="max-w-4xl mx-auto text-center">
 
-                <h3 class="handwritten text-base font-bold mb-2 text-gray-500">Lines and Minds: Visual Abstraction in Art, Psychology, and Computer Graphics</h3>
+                <h3 class="handwritten text-base font-bold mb-2 text-gray-500">Drawing and Sketching: Art, Psychology, and Computer Graphics</h3>
 
-                <!-- <div class="mb-6">
+                <div class="mb-6">
                     <p class="text-gray-500 text-sm">
-                        © SIGGRAPH 2026 Workshop. Website designed and developed by Yael Vinker and Mia Tang.
-                        <br><a href="./2025/" class="underline hover:text-gray-700">SIGGRAPH 2025 Edition</a>
+                        © SIGGRAPH 2025 Workshop. Website designed and developed by Yael Vinker and Mia Tang.
                     </p>
-                </div> -->
+                </div>
 
                 <svg class="sketchy-line mb-6" viewBox="0 0 400 20">
                     <defs>
