@@ -73,6 +73,12 @@
             /* font-style: normal; */
         }
 
+        .subtitle {
+            font-family: 'Didot', serif;
+            font-weight: 400;
+            font-style: italic;
+        }
+
         .sketch-border {
             border: 2px solid #333;
             border-radius: 8px;
@@ -359,7 +365,7 @@
             <div class="max-w-4xl mx-auto text-center">
                 <!-- <div class="max-w-4xl mx-auto text-center relative mt-10"> -->
                 <!-- Tagline -->
-                <p class="handwritten text-xl md:text-2xl text-gray-600 mb-4">
+                <p class="subtitle text-xl md:text-2xl text-gray-600 mb-4">
                     SIGGRAPH 2026 Workshop
                 </p>
 
@@ -382,11 +388,15 @@
                     <path class="pencil-stroke-light" d="M12,11 Q52,9 102,13 T202,10 T302,12 T388,11" filter="url(#pencilTexture1)" />
                 </svg>
 
-                <p class="handwritten text-xl md:text-2xl text-gray-700 mb-6">
+                <p class="subtitle text-xl md:text-2xl text-gray-700 mb-6">
                     Sunday, July 19th, 2026 <br>
                     2:00pm - 5:15pm PT <br>
-                    Los Angeles Convention Center, Room TBD <br>
+                    LA Convention Center, Room TBD <br>
                 </p>
+
+                <!-- <a href="https://s2025.conference-schedule.org/?filter1=evtt109" target="_blank" class="ml-3 inline-block px-3 py-1 text-lg rounded-xl bg-gray-100 text-gray-700 hover:bg-gray-800 transition hover:text-white">
+                    Add to calendar →
+                </a> -->
             </div>
         </div>
 
@@ -398,13 +408,12 @@
         <div class="container mx-auto px-4 sm:px-6 py-3 flex justify-center text-center">
 
             <!-- Menu links -->
-            <div id="nav-menu" class="sm:flex flex-col sm:flex-row gap-6 sm:gap-8 items-center text-lg sm:text-xl handwritten font-medium">
+            <div id="nav-menu" class="sm:flex flex-col sm:flex-row gap-6 sm:gap-8 items-center text-lg sm:text-xl subtitle font-medium">
                 <a href="#overview" class="nav-link py-2 mr-2"><span class="text-gray-400 mr-2">•</span>Overview</a>
-                <a href="#topics" class="nav-link py-2 mr-2"><span class="text-gray-400 mr-2">•</span>Topics</a>
                 <a href="#speakers" class="nav-link py-2 mr-2"><span class="text-gray-400 mr-2">•</span>Speakers</a>
+                <a href="#topics" class="nav-link py-2 mr-2"><span class="text-gray-400 mr-2">•</span>Topics</a>
                 <a href="#schedule" class="nav-link py-2 mr-2"><span class="text-gray-400 mr-2">•</span>Schedule</a>
                 <a href="#organizers" class="nav-link py-2 mr-2"><span class="text-gray-400 mr-2">•</span>Organizers</a>
-                <a href="#sponsors" class="nav-link py-2 mr-2"><span class="text-gray-400 mr-2">•</span>Sponsors</a>
             </div>
         </div>
     </nav>
@@ -428,13 +437,13 @@
                 </svg>
 
                 <!-- <div class="sketch-border p-8 mb-8 sketch-shadow"> -->
-                <div class="sketch-border p-8 sketch-shadow">
+                <!-- <div class="sketch-border p-8 sketch-shadow"> -->
                     <div class="space-y-6">
                         <img src="assets/2026_sig_workshop_comic.png" alt="Workshop comic introducing the topic" class="w-full">
                     </div>
-                </div>
+                <!-- </div> -->
                 <p class="text-base sm:text-md text-gray-700 leading-relaxed">
-                    This workshop follows the COGGRAPH workshop at CogSci 2024 and the Drawing and Sketching workshop at SIGGRAPH 2025, continuing a growing effort to build an interdisciplinary community around these topics.
+                    <br>This workshop follows the Drawing and Sketching workshop at SIGGRAPH 2025 the COGGRAPH workshop at CogSci 2024 and , continuing a growing effort to build an interdisciplinary community around these topics.
                 </p>
                 <!-- </div> -->
             </div>
@@ -582,8 +591,8 @@ His work has influenced artists, designers, and researchers across fields, and o
                         <div class="text-4xl mb-4 text-center">
                             <img src="./assets/handshake.png" alt="Collaboration Icon" class="w-24 h-24 drop-shadow-lg mx-auto">
                         </div>
-                        <h3 class="handwritten text-xl font-bold text-gray-900 mb-3 text-center">Abstraction & Human-AI Collaboration</h3>
-                        <p class="text-gray-600 text-center">How can sketches, gestures, and diagrams serve as natural interfaces between humans and machines?</p>
+                        <h3 class="handwritten text-xl font-bold text-gray-900 mb-3 text-center">Visual Communication</h3>
+                        <p class="text-gray-600 text-center">How do abstract visuals facilitate communication and collaboration? What makes diagrams, sketches, and visual explanations effective tools for sharing ideas?</p>
                     </div>
                 </div>
             </div>
@@ -613,7 +622,7 @@ His work has influenced artists, designers, and researchers across fields, and o
                             </div>
                             <div class="flex-1">
                                 <h3 class="handwritten text-center sm:text-left text-xl font-bold text-gray-900 mb-2">Introduction</h3>
-                                <p class="text-gray-600 mb-3">Brief framing of the key questions around visual abstraction and communication</p>
+                                <p class="text-gray-600 mb-3">Brief framing of the key questions around visual abstraction and communication, by Yael Vinker</p>
                             </div>
                         </div>
 
@@ -623,16 +632,20 @@ His work has influenced artists, designers, and researchers across fields, and o
                             </div>
                             <div class="flex-1">
                                 <h3 class="handwritten text-center sm:text-left text-xl font-bold text-gray-900 mb-2">Invited Talks</h3>
-                                <p class="text-gray-600 mb-3">Three 40-minute talks spanning computational, cognitive, and interactive perspectives on visual abstraction</p>
+                                <p class="text-gray-600 mb-3">Three 40-minute talks spanning computational, interactive, and cognitive perspectives on visual abstraction:</p>
                                 <div class="text-base space-y-1 mb-3">
-                                    <p class="text-gray-600">• Barbara Tversky — <i>Spatial thinking, diagrams, and the cognitive foundations of abstraction</i></p>
-                                    <p class="text-gray-600">• Aaron Hertzmann — <i>Depiction, stylization, and the perception of visual representations</i></p>
-                                    <p class="text-gray-600">• Rubaiat Habib — <i>Sketch-based interfaces and tools for visual expression</i></p>
+                                    <p class="text-gray-600">• <b>Aaron Hertzmann</b> — <i>Depiction, stylization, and the perception of visual representations</i></p>
+                                    <p class="text-gray-600">• <b>Rubaiat Habib</b> — <i>Sketch-based interfaces and tools for visual expression</i></p>
+                                    <p class="text-gray-600">• <b>Barbara Tversky</b> — <i>Spatial thinking, diagrams, and the cognitive foundations of abstraction</i></p>
+                                    
+                                    
                                 </div>
+                                <p class="text-gray-600 mb-3"> We'll close the talks with a live demonstration of Reve, an AI image generator and creative tool.</p>
+                               
                             </div>
                         </div>
 
-                        <div class="sm:flex items-start gap-4">
+                        <!-- <div class="sm:flex items-start gap-4">
                             <div class="flex-shrink-0 flex justify-center mb-4">
                                 <img src="./assets/lightning.png" alt="Lightning Icon" class="w-24 h-24 drop-shadow-lg">
                             </div>
@@ -640,7 +653,7 @@ His work has influenced artists, designers, and researchers across fields, and o
                                 <h3 class="handwritten text-center sm:text-left text-xl font-bold text-gray-900 mb-2">Reve Demo</h3>
                                 <p class="text-gray-600 mb-3">Live demonstration of Reve, an interactive sketch-based creative tool</p>
                             </div>
-                        </div>
+                        </div> -->
 
                         <div class="sm:flex items-start gap-4">
                             <div class="flex-shrink-0 flex justify-center mb-4">
@@ -648,11 +661,11 @@ His work has influenced artists, designers, and researchers across fields, and o
                             </div>
                             <div class="flex-1">
                                 <h3 class="handwritten text-center sm:text-left text-xl font-bold text-gray-900 mb-2">Panel Discussion</h3>
-                                <p class="text-gray-600 mb-3">50-minute moderated panel with speakers and Scott McCloud, reflecting on connections across the talks, engaging with audience questions, and identifying future directions</p>
+                                <p class="text-gray-600 mb-3"><b>Scott McCloud</b>, author of <i>Understanding Comics</i>, will join us and our speakers for a great panel discussion, connecting ideas across the talks and engaging with audience questions. Moderated by Judy Fan.</p>
                             </div>
                         </div>
 
-                        <div class="sm:flex items-start gap-4">
+                        <!-- <div class="sm:flex items-start gap-4">
                             <div class="flex-shrink-0 flex justify-center mb-4">
                                 <img src="./assets/handshake.png" alt="Discussion Icon" class="w-24 h-24 drop-shadow-lg">
                             </div>
@@ -660,7 +673,7 @@ His work has influenced artists, designers, and researchers across fields, and o
                                 <h3 class="handwritten text-center sm:text-left text-xl font-bold text-gray-900 mb-2">Open Discussion</h3>
                                 <p class="text-gray-600">Attendees reflect on connections, share perspectives, and identify promising directions for future research and collaboration</p>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
 
                     <div class="mt-4 text-center">
@@ -763,34 +776,7 @@ His work has influenced artists, designers, and researchers across fields, and o
             </div>
         </section>
 
-        <!-- Sponsors Section -->
-        <section id="sponsors" class="mb-20 scroll-mt-24">
-            <div class="max-w-3xl mx-auto">
-                <h2 class="handwritten text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">Sponsors</h2>
-
-                <svg class="sketchy-line mb-6" viewBox="0 0 400 20">
-                    <defs>
-                        <filter id="pencilTextureSponsor" x="0" y="0" width="100%" height="100%">
-                            <feTurbulence baseFrequency="0.9" numOctaves="4" result="noise" />
-                            <feDisplacementMap in="SourceGraphic" in2="noise" scale="1" />
-                        </filter>
-                    </defs>
-                    <path class="pencil-stroke-shadow" d="M8,12 Q48,10 98,14 T198,11 T298,13 T392,12" filter="url(#pencilTextureSponsor)" />
-                    <path class="pencil-stroke" d="M10,10 Q50,8 100,12 T200,9 T300,11 T390,10" filter="url(#pencilTextureSponsor)" />
-                    <path class="pencil-stroke-light" d="M12,11 Q52,9 102,13 T202,10 T302,12 T388,11" filter="url(#pencilTextureSponsor)" />
-                </svg>
-
-                <p class="text-gray-600 text-center mb-8">We are grateful for the generous support of our sponsors.</p>
-                <div class="flex justify-center items-center gap-16 flex-wrap">
-                    <a href="https://research.adobe.com/" target="_blank" class="hover:opacity-80 transition-opacity">
-                        <img src="./assets/adobe-logo.png" alt="Adobe Research" class="h-12 object-contain">
-                    </a>
-                    <a href="https://www.reve.art/" target="_blank" class="hover:opacity-80 transition-opacity">
-                        <img src="./assets/reve-ai-logo.png" alt="Reve AI" class="h-12 object-contain">
-                    </a>
-                </div>
-            </div>
-        </section>
+        
 
         <!-- Target Audience -->
         <section class="mb-8 scroll-mt-24">
@@ -839,6 +825,24 @@ His work has influenced artists, designers, and researchers across fields, and o
                             If a line can say a lot, imagine what we can say together.
                         </p>
                     </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Sponsors Section -->
+        <section id="sponsors" >
+            <div class="max-w-3xl mx-auto">
+                                <p class="text-gray-600 text-center mb-8">We are grateful for the generous support of our sponsors.</p>
+                <div class="flex justify-center items-center gap-16 flex-wrap">
+                    
+                    <a href="https://www.reve.art/" target="_blank" class="hover:opacity-80 transition-opacity">
+                        <img src="./assets/reve-ai-logo.png" alt="Reve AI" class="h-12 object-contain">
+                    </a>
+
+                    <a href="https://research.adobe.com/" target="_blank" class="hover:opacity-80 transition-opacity">
+                        <img src="./assets/adobe-logo.png" alt="Adobe Research" class="h-12 object-contain">
+                    </a>
                 </div>
             </div>
         </section>
